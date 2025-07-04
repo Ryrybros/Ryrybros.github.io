@@ -1,12 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Boutons Hello/World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            gap: 20px; /* Espace entre les boutons */
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        #helloButton {
+            background-color: #4CAF50; /* Vert */
+        }
+        #helloButton:hover {
+            background-color: #45a049;
+        }
+        #worldButton {
+            background-color: #008CBA; /* Bleu */
+        }
+        #worldButton:hover {
+            background-color: #007bb5;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello World</h1>
-    
+
+    <button id="helloButton">Afficher Hello</button>
+    <button id="worldButton">Afficher World</button>
+
+    <script>
+        // Sélectionne les boutons par leur ID
+        const helloButton = document.getElementById('helloButton');
+        const worldButton = document.getElementById('worldButton');
+
+        // Ajoute un écouteur d'événement pour le clic sur le bouton "Hello"
+        helloButton.addEventListener('click', () => {
+            console.log('Hello');
+        });
+
+        // Ajoute un écouteur d'événement pour le clic sur le bouton "World"
+        worldButton.addEventListener('click', () => {
+            console.log('World');
+        });
+    </script>
+
 </body>
 </html>
